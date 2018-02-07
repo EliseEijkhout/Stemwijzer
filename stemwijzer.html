@@ -5,17 +5,19 @@
 </head>
 <link rel="stylesheet" href="css/stemwijzer.css">
 <body>
-	<button onclick="prev()"> Back</button>
+	<main>
+
+	<button id="prev" onclick="prev()"> Back</button>
 
 		<h1 id="subject"></h1>
 		<p id="statement"></p>
 
-		<main>
+		
 
-			<button > Eens</button>
-			<button >Geen van beide</button>
-			<button >Oneens</button>
-			<button onclick="next()">Sla deze vraag over</button>
+			<button onclick="eens()"> Eens</button>
+			<button onclick="geen"> Geen van beide</button>
+			<button onclick="oneens"> Oneens</button>
+			<button onclick="next()"> Sla deze vraag over</button>
 
 		</main>
 

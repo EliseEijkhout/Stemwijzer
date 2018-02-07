@@ -3,7 +3,9 @@ var nr = 0;
 var subject = document.getElementById('subject');
 var statement = document.getElementById('statement');
 var next = document.getElementById('skip');
-var back = document.getElementById('back');
+var back = document.getElementById('prev');
+var eens = document.getElementById('eens');
+var oneens = document.getElementById('oneens');
 
 subject.innerHTML = subjects[nr].title;
 statement.innerHTML = subjects[nr].statement;
