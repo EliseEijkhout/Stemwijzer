@@ -1,4 +1,4 @@
-var nr =0;
+var nr = 0;
 
 var subject = document.getElementById('subject');
 var statement = document.getElementById('statement');
