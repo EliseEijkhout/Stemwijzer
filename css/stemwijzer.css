@@ -8,7 +8,7 @@ body {
 h1{
 	font-family: Arial;
 	font-size: 44px;
-	color: blue;
+	color: #01B4DC;
 	text-align: center;
 }
 
@@ -19,19 +19,59 @@ p {
 	text-align: center;
 	
 }
-main {
+
+#main {
 	background-color: white;
-	display: inline-block;
-	margin-right: 20%;
-	margin-left: 20%;
-	opacity: 0.8;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.8);
 	text-align: center;
 	padding-bottom: 30%;
+	width: 75%;
+	display: none;
 }
+
+.button{
+	background-color: black;
+	height: auto;
+	
+	border-radius: 5px;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	transition: background-color .2s ease;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+}
+
+.button:hover{
+	background-color: #01B4DC;
+	height: auto;
+	display: inline;
+	border-radius: 5px;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color .2s ease;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+}
+
+
 
 #back {
-	margin-right: 85%;
-    margin-top: 25px;
+	margin-right: 85%!important;
+    margin-top: 25px!important;
 
 }
+
+
 
