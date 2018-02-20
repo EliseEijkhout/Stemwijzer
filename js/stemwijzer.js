@@ -56,7 +56,6 @@ var parties = [
 	{name: "Artikel 1", secular: true, size: 0},
 	{name: "Libertarische Partij", secular: true, size: 0}
 ];
-var results = document.getElementById('Resultaten');
 
 startBtn.addEventListener("click", start);
 
@@ -98,7 +97,7 @@ eensBtn.addEventListener("click", function() {
     for (i = 0; i < 20; i++) { 
    		if (positions[i].position == "pro") {
    			punten[i].points++
-   			console.log(punten);
+   			console.log(nr);
    			
    			
    		}
@@ -116,7 +115,7 @@ oneensBtn.addEventListener("click", function() {
 	subject.innerHTML = subjects[nr].title;
 	statement.innerHTML = subjects[nr].statement;	
 
-	console.log(punten);
+	console.log(nr);
 
     var positions = subjects[nr].parties;
 	for (i = 0; i < 20; i++) { 
@@ -142,7 +141,7 @@ geenBtn.addEventListener("click", function() {
     	for (i = 0; i < 20; i++) { 
    			if (positions[i].position == "ambivalent") {
    				punten[i].points++
-   				console.log(punten);
+   				console.log(nr);
    			
    			
    		}
@@ -169,15 +168,14 @@ backBtn.addEventListener("click", function() {
 subject.innerHTML = subjects[nr].title;
 statement.innerHTML = subjects[nr].statement;
 
+
+
 main.style.display = "none";
-
-
-
 
 function results(){
 
-	title.innerHTML = "Resultaten";
-	subject.innerHTML = "";
+	document.getElementById('subject').innerHTML;
+	subject.innerHTML = "Resultaten";
 	party = "";
 for (i = 0; i < 20; i++) { 
     party += punten[i].name + "-" + punten[i].points + "<br>";
@@ -186,7 +184,6 @@ for (i = 0; i < 20; i++) {
 	console.log(party);
 
 var nextBtn = document.getElementById('skip').style.display = "none";
-var backBtn = document.getElementById('back').style.display = "none";
 var eensBtn = document.getElementById('eens').style.display = "none";
 var oneensBtn = document.getElementById('oneens').style.display = "none";
 var geenBtn = document.getElementById('geen').style.display = "none";
