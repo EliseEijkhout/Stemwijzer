@@ -10,7 +10,9 @@ var eensBtn = document.getElementById('eens');
 var oneensBtn = document.getElementById('oneens');
 var geenBtn = document.getElementById('geen');
 var main = document.getElementById('main');
-var parties = document.getElementById('parties');
+
+var partyResults = document.getElementById('parties');
+
 var punten = [
 	{name: "VVD", points: 0},
 	{name: "CDA", points: 0},
@@ -34,42 +36,19 @@ var punten = [
 	{name: "Libertarische Partij", points: 0}
 ];
 
-var parties = [
-	{name: "VVD", secular: true, size: 33, long: "Volkspartij voor Vrijheid en Democratie"},
-	{name: "CDA", secular: false, size: 19, long: "Christen Democratisch Appel"},
-	{name: "PVV", secular: true, size: 20, long: "Partij voor de Vrijheid"},
-	{name: "D66", secular: true, size: 19, long: "Democratie 66"},
-	{name: "GroenLinks", secular: true, size: 14},
-	{name: "SP", secular: true, size: 14, long: "Socialistische Partij"},
-	{name: "PvdA", secular: true, size: 9, long: "Partij van de Arbeid"},
-	{name: "ChristenUnie", secular: false, size: 5},
-	{name: "Partij voor de Dieren", secular: true, size: 33},
-	{name: "SGP", secular: false, size: 33, long: "Staatkundig Gerefomeerde Partij"},
-	{name: "DENK", secular: true, size: 3},
-	{name: "Forum voor Democratie", secular: true, size: 2},
-	{name: "Lokaal in de kamer", secular: true, size: 0},
-	{name: "OndernemersPartij", secular: true, size: 0},
-	{name: "VNL", secular: true, size: 0},
-	{name: "Nieuwe Wegen", secular: true, size: 0},
-	{name: "De Burger Beweging", secular: true, size: 0},
-	{name: "Piratenpartij", secular: true, size: 0},
-	{name: "Artikel 1", secular: true, size: 0},
-	{name: "Libertarische Partij", secular: true, size: 0}
-];
-
 startBtn.addEventListener("click", start);
 
 function start() {
  console.log("start()");
 
-var start = document.getElementById('start').style.display = "none";
-main.style.display = "block";
+	var start = document.getElementById('start').style.display = "none";
+	main.style.display = "block";
 
 
  	
- var start = document.getElementById('start');
- nr++;
- start.innerHTML = 'start';
+ 	var start = document.getElementById('start');
+ 	nr++;
+ 	start.innerHTML = 'start';
  
 
 }
@@ -173,21 +152,21 @@ statement.innerHTML = subjects[nr].statement;
 main.style.display = "none";
 
 function results(){
-
-	document.getElementById('subject').innerHTML;
 	subject.innerHTML = "Resultaten";
-	party = "";
-for (i = 0; i < 20; i++) { 
-    party += punten[i].name + "-" + punten[i].points + "<br>";
-}
-	parties.innerHTML = party;
-	console.log(party);
+	var partyResultsHtml = "";
 
-var nextBtn = document.getElementById('skip').style.display = "none";
-var eensBtn = document.getElementById('eens').style.display = "none";
-var oneensBtn = document.getElementById('oneens').style.display = "none";
-var geenBtn = document.getElementById('geen').style.display = "none";
+		statement.innerHTML = "";
 
+	for (i = 0; i < punten.length; i++) { 
+    	partyResultsHtml += punten[i].name + "-" + punten[i].points + "<br>";
+	}
+	
+	partyResults.innerHTML = partyResultsHtml;
+	//console.log(partyResultsHtml);
 
+	var nextBtn = document.getElementById('skip').style.display = "none";
+	var eensBtn = document.getElementById('eens').style.display = "none";
+	var oneensBtn = document.getElementById('oneens').style.display = "none";
+	var geenBtn = document.getElementById('geen').style.display = "none";
 };
 
